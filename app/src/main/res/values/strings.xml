@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Barometric</string>
+    <string name="widget_description">Today’s high, low, and pressure difference, a graph of all available sources, or both.</string>
+</resources>

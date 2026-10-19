@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@drawable/widget_background" android:padding="14dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+        <TextView android:id="@+id/widget_location" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Hyrum" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/widget_text" android:maxLines="1" android:ellipsize="end" />
+        <TextView android:id="@+id/widget_configure" android:layout_width="48dp" android:layout_height="32dp" android:text="Edit" android:gravity="center" android:textSize="12sp" android:textColor="@color/widget_text" android:contentDescription="Edit widget display" />
+    </LinearLayout>
+    <TextView android:id="@+id/widget_date" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Today · so far · inHg" android:textSize="11sp" android:textColor="@color/widget_secondary" />
+    <LinearLayout android:id="@+id/widget_stats" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="8dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="High" android:textSize="11sp" android:textColor="@color/widget_secondary" />
+                <TextView android:id="@+id/widget_high" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="—" android:textSize="19sp" android:textStyle="bold" android:textColor="@color/widget_text" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Low" android:textSize="11sp" android:textColor="@color/widget_secondary" />
+                <TextView android:id="@+id/widget_low" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="—" android:textSize="19sp" android:textStyle="bold" android:textColor="@color/widget_text" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Difference" android:textSize="11sp" android:textColor="@color/widget_secondary" />
+                <TextView android:id="@+id/widget_difference" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="—" android:textSize="19sp" android:textStyle="bold" android:textColor="@color/widget_text" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:id="@+id/widget_stats_source" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="10sp" android:textColor="@color/widget_secondary" />
+    </LinearLayout>
+    <RelativeLayout android:id="@+id/widget_graph_section" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="8dp">
+        <LinearLayout android:id="@+id/widget_graph_legend" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+            <TextView android:id="@+id/widget_usu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="USU   " android:textSize="11sp" />
+            <TextView android:id="@+id/widget_noaa" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NOAA   " android:textSize="11sp" />
+            <TextView android:id="@+id/widget_modeled" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Modeled" android:textSize="11sp" />
+        </LinearLayout>
+        <ImageView android:id="@+id/widget_graph" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/widget_graph_legend" android:layout_above="@+id/widget_graph_times" android:scaleType="fitXY" android:contentDescription="Today's pressure graph. Tap to inspect in the app." />
+        <LinearLayout android:id="@id/widget_graph_times" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="12 AM" android:textSize="9sp" android:textColor="@color/widget_secondary" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12 AM (+1 day)" android:textSize="9sp" android:textColor="@color/widget_secondary" />
+        </LinearLayout>
+    </RelativeLayout>
+    <TextView android:id="@+id/widget_updated" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Open app to load pressure" android:textSize="10sp" android:textColor="@color/widget_secondary" />
+</LinearLayout>
